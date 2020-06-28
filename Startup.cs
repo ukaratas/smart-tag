@@ -40,9 +40,13 @@ namespace smart_tag
              {
                  c.SwaggerDoc("v1", new OpenApiInfo
                  {
-                     Title = "Smart Documents",
+                     Title = "Smart Tag",
                      Version = "v1",
-                     Description = "API based DMS micro services",
+                     Description = @"API based Smart item **labeling**  micro services.  
+                     - **one**  
+                     - two 
+                     - three
+                    ",
                  });
 
                  var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
