@@ -24,14 +24,16 @@ namespace smart_tag.Controllers
         /// Retrieves queried tag(s) 
         /// </summary>
         /// <remarks>
-        /// All registered tags are searched with using tag propeties, entity codes and entity instance id. 
+        /// All **registered tags** are searched with using tag propeties, entity codes and entity instance id. 
         /// ## with tag-query can filter query with tag properties
         /// - with entity code filter tags used for specific type of entity. 
         /// - with instance id of tagged item,  directly filter items tags 
         /// </remarks>
+        /// <param name="tagFilter">Filters tags with tag code value. This field support string filter functions.</param>
+        /// <param name="entityFilter">Filters tags with attached entity types. This field support string filter functions.</param>
         [SwaggerOperation(Tags = new[] { "Tag" })]
         [HttpGet()]
-        public ResponsePage<Tag> Tags([FromQuery(Name = "tag-query")] string tagQuery, [FromQuery(Name = "entity-code")] string entityCode, [FromQuery(Name = "instance-id")] string instanceId, [FromQuery(Name = "page-index")] int pageIndex, [FromQuery(Name = "page-size")] int pageSize)
+        public ResponsePage<Tag> Tags([FromQuery(Name = "tag-filter")] string tagFilter, [FromQuery(Name = "entity-filter")] string entityFilter, [FromQuery(Name = "page-index")] int pageIndex, [FromQuery(Name = "page-size")] int pageSize)
         {
             return new ResponsePage<Tag> { HasNextPage = true };
         }

@@ -42,10 +42,24 @@ namespace smart_tag
                  {
                      Title = "Smart Tag",
                      Version = "v1",
-                     Description = @"API based Smart item **labeling**  micro services.  
-                     - **one**  
-                     - two 
-                     - three
+                     Description = @"API based item **labeling**  micro services.  
+                     .  
+                     **Key Fatures**  
+                     - Tag any record with just two input: Entity descriptor and item unique id.  
+                     - Tags can have user defined properties.
+                     - Tags and Items search services are provided.  
+                     .  
+                     **Main Components**  
+                     **1 - Tag:** Tags are labels can attached to anything that has unique identifier (Guid).   
+                     **2 - Tag Propeties:** Propetries are typed key value collection for tags. When a tag is attached to item, tag also carry the property values those defined for tag.   
+                     **3 - Tag Intances:** Intances are records those loosly coupled connected to tags. Tag instance record just know the unique id of item, type of item and tag propery values.  
+                     .  
+                     **Common Topics**  
+                     .
+                     **GET Method Filter Parameters**  
+                     **String Filter**  This filter support exact value, *@contains(part of string)*, *@starts-with*(starting String), *@end-with* keywords
+                     .  
+                     .    
                     ",
                  });
 
