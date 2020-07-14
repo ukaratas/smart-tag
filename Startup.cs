@@ -55,9 +55,9 @@ namespace smart_tag
                      **3 - Tag Intances:** Intances are records those loosly coupled connected to tags. Tag instance record just know the unique id of item, type of item and tag propery values.  
                      .  
                      **Common Topics**  
-                     .
+                     .  
                      **GET Method Filter Parameters**  
-                     **String Filter**  This filter support exact value, *@contains(part of string)*, *@starts-with*(starting String), *@end-with* keywords
+                     **String Filter**  This filter support exact value, @contains(part of string), @begin-with(starting of String), @end-with*(ending of String) keywords
                      .  
                      .    
                     ",
